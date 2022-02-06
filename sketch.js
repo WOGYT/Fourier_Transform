@@ -17,7 +17,7 @@ width_window = window.innerHeight
 
 function setup() {
   createCanvas(height_window, width_window);
-  const skip = 20;
+  const skip = 15;
   for (let i = 0; i < drawing_2.length; i += skip) {
     x.push(drawing_2[i].x);
     y.push(drawing_2[i].y);
@@ -25,8 +25,8 @@ function setup() {
   fourierX = dft(x);
   fourierY = dft(y);
 
-  fourierX.sort((a, b) => b.amp - a.amp);
-  fourierY.sort((a, b) => b.amp - a.amp);
+  fourierX.sort((a, b) => b.amplitude - a.amplitude);
+  fourierY.sort((a, b) => b.amplitude - a.amplitude);
 }
 
 function epiCycles(x, y, rotation, fourier) {

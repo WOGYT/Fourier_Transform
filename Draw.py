@@ -14,6 +14,7 @@ logging.basicConfig(stream=sys.stdout, level=logging.INFO)
 
 
 def greeting():
+    global red_coef
     try:
         print("\n\n\nWelcome the the drawing program ! When the window will appears, type m to start drawing, type f to stop"
             "\nRemember to end where you started drawing\n")
