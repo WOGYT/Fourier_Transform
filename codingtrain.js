@@ -3,6 +3,7 @@
 // https://thecodingtrain.com/CodingChallenges/130-fourier-transform-drawing.html
 // https://youtu.be/MY4luNgGfms
 // https://editor.p5js.org/codingtrain/sketches/jawHqwfda
+// Copyright (c) 2019 Coding Train
 
 // Thank you to https://twitter.com/tomfevrier for the drawing path!
 

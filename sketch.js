@@ -1,5 +1,6 @@
 // Coding Challenge 130.1: Drawing with Fourier Transform and Epicycles
 // Daniel Shiffman
+// Copyright (c) 2019 Coding Train
 // https://thecodingtrain.com/CodingChallenges/130-fourier-transform-drawing.html
 // https://youtu.be/MY4luNgGfms
 // https://editor.p5js.org/codingtrain/sketches/jawHqwfda
@@ -33,7 +34,7 @@ function epiCycles(x, y, rotation, fourier) {
     let prevx = x;
     let prevy = y;
     let freq = fourier[i].freq;
-    let radius = fourier[i].amp;
+    let radius = fourier[i].amplitude;
     let phase = fourier[i].phase;
     x += radius * cos(freq * time + phase + rotation);
     y += radius * sin(freq * time + phase + rotation);
