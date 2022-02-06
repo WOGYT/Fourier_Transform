@@ -1,17 +1,30 @@
 #######################################################################################################
 ########## IMPORT
 #######################################################################################################
+
 from tkinter import *
 import logging
 import sys
 
-logging.basicConfig(stream=sys.stdout, level=logging.ERROR)
+logging.basicConfig(stream=sys.stdout, level=logging.INFO)
+
 #######################################################################################################
 ########## FUNCTION
 #######################################################################################################
 
 
+def greeting():
+    try:
+        print("\n\n\nWelcome the the drawing program ! When the window will appears, type m to start drawing, type f to stop"
+            "\nRemember to end where you started drawing\n")
+        red_coef = float(input("Choose the reduction coefficient (float):\n"))
+    except ValueError as e:
+        print(f"You can only write floats error = '{e}'")
+        greeting()
+
+
 def get_mouse_input(event):
+    # get mouse coordinates on the screen
     x, y = event.x, event.y
     logging.debug(f"Mouse input:{x=};{y=}")
     if mouse:
@@ -23,6 +36,7 @@ def draw_path(x, y):
     global path
     global x_max
     global y_max
+    # draw the path on the screen
     logging.debug("draw")
     img.put("#000000", (x, y))
     path.append((x, y))
@@ -35,20 +49,20 @@ def key_pressed(event):
     global count
     global path
     global mouse
-    logging.error(f"x_max= {x_max}")
-    logging.error(f"y_max={y_max}")
-    logging.error(f"path.lenght = {len(path)}")
+    logging.debug(f"x_max= {x_max}")
+    logging.debug(f"y_max={y_max}")
+    logging.info(f"path.lenght = {len(path)}")
     if key == "m":
         # get mouse input
         mouse = True
-        logging.error("mouse true")
+        logging.debug("mouse true")
     elif key == "f":
         mouse = False
         with open("listcoord.js", "w") as list:
             list.write("let drawing_2 = [\n")
             for line in path:
                 x, y = line
-                # transform the coordinates from a (0;x),(0;y) matrix to a (-x/2;x/2),(-y/2;y/2) matrix
+                # transform the coordinates to have negative values
                 x = x / red_coef
                 if x <= (x_max / red_coef):
                     x = x - (x_max / red_coef)
@@ -70,21 +84,23 @@ gray = "#717C7A"
 white = "#FFFFFF"
 blue_green = "#2CDF85"
 background_color = gray
+
+# size of the screen
 Width = 1900
 Height = 920
+
+# initialization of the variables
 path = []
 count = 0
 mouse = False
 red_coef = 1
 x_max = y_max = 0
 
-red_coef = float(input("Choose the reduction coeficient (float):\n"))
+# ask the user to choose the reduction coefficient
+greeting()
 
 # create the first window
 window = Tk()
-
-#create the frame
-#frame = Frame(window, bg=gray)
 
 # Create the canva and the image to draw the path on
 canvas = Canvas(window, width=Width, height=Height, bg=gray)
@@ -99,16 +115,8 @@ window.minsize(Width, Height)
 window.iconbitmap("icon.ico")
 window.config(background=background_color)
 
-# add some text
-# random_title = Label(canvas, text="random text", font=("Arial", 40), bg=gray, fg=white)
-# random_title.pack()
-
 # add texts to the frame
 canvas.pack(expand=YES)
-
-# add button
-# pen_button = Button(canvas, text="image", font=("Arial", 40), bg=gray, fg=white) #command=
-# pen_button.pack(pady=25, fill=X)
 
 #look for input
 window.bind("<Key>", key_pressed)
