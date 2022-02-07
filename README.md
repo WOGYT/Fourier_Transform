@@ -18,7 +18,7 @@ As we can see, each FC is a complexe number, a + bi, where a and b are real numb
 
 ![equation](https://latex.codecogs.com/gif.image?%5Cdpi%7B110%7D%20re_n=%20x_n%20%5Ccdot%20cos%5Cleft%20(%20%5Cfrac%7B2%5Cpi%7D%7BN%7Dkn%20%20%5Cright%20))
 
-![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;im_n=&space;x_n&space;\cdot&space;sin\left&space;(&space;\frac{2\pi}{N}kn&space;&space;\right&space;)" title="im_n= x_n \cdot sin\left ( \frac{2\pi}{N}kn \right ))
+![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;im_n=&space;x_n&space;\cdot&space;sin\left&space;(&space;\frac{2\pi}{N}kn&space;&space;\right&space;))
 
 In order to avoid doing calculations with real numbers, we are drawing the x and y separately. 
 To visualize the path of the design we are using circles. There are as many circles as there are fourier coefficients. 
