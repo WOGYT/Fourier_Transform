@@ -24,12 +24,12 @@ In order to avoid doing calculations with real numbers, we are drawing the x and
 To visualize the path of the design we are using circles. There are as many circles as there are fourier coefficients. 
 To draw those circles, we need the frequency, which is the speed at which the circle will turn, noted "freq". 
 
-![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;freq&space;=&space;k" title="freq = k)
+![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;freq&space;=&space;k)
 
 We also need the amplitude, which is the radius of the circle. The amplitude is defined by:
 
-![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;amplitude&space;=&space;\sqrt{re^{2}&plus;im^{2}}" title="amplitude = \sqrt{re^{2}+im^{2}})
+![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;amplitude&space;=&space;\sqrt{re^{2}&plus;im^{2}})
 
 Finally, we need the phase, which is the angle at which the circle wil started drawing. The phase is defined by:
 
-![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;phase&space;=&space;atan2(im,&space;re)" title="phase = atan2(im, re))
+![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;phase&space;=&space;atan2(im,&space;re))
