@@ -13,7 +13,7 @@ To redrawn the design we are using a Descrete Fourier Transform (DFT). The DFT t
 
 ![equation](https://latex.codecogs.com/svg.image?X_n=&space;\sum_{n=0}^{N-1}&space;x_n&space;\cdot&space;\left&space;[&space;cos\left&space;(&space;\frac{2\pi}{N}kn&space;&space;\right&space;)&space;-i&space;\cdot&space;sin\left&space;(&space;\frac{2\pi}{N}kn&space;&space;\right&space;)&space;\right&space;])
 
-### the sketch.js file:
+### The sketch.js file:
 As we can see, each FC is a complexe number, a + bi, where a and b are real number and where a is called the real part and bi the imaginary part. In our program, the real part is noted "re" and the imaginary part is noted "im". The real and imagninary parts are defined by:
 
 ![equation](https://latex.codecogs.com/gif.image?%5Cdpi%7B110%7D%20re_n=%20x_n%20%5Ccdot%20cos%5Cleft%20(%20%5Cfrac%7B2%5Cpi%7D%7BN%7Dkn%20%20%5Cright%20))
@@ -33,3 +33,5 @@ We also need the amplitude, which is the radius of the circle. The amplitude is 
 Finally, we need the phase, which is the angle at which the circle wil started drawing. The phase is defined by:
 
 ![equation](https://latex.codecogs.com/gif.image?\dpi{110}&space;phase&space;=&space;atan2(im,&space;re))
+
+## Installation
