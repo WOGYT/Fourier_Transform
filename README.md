@@ -1,5 +1,11 @@
 # Fourier_Transform
 
+![Language](https://img.shields.io/badge/Language-JavaScript-ffcc14)
+![Open Source](https://badges.frapsoft.com/os/v2/open-source.svg?v=103)
+
+<br/>
+
+
 Draw something using the Draw.py file and open the Fourier.html to see it redrawn using Discrete Fourier Transform (DFT)
 
 
